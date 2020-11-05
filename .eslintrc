@@ -21,5 +21,7 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": ["*.config.js"]
+  "ignorePatterns": [
+    "*.config.js"
+  ]
 }
