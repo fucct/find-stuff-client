@@ -3,7 +3,6 @@
   flex-direction: column;
   text-align: center;
   height: 100vh;
-  padding-inline: 5px;
 }
 
 a, a:link, a:visited, a:hover, a:active {
