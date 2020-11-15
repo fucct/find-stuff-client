@@ -10,7 +10,7 @@ import {
 const LoginButton: React.FC = () => {
   const login = async () => {
     const response = await axios.get(
-      `${GITHUB_LOGIN_URL}?client_id=${CLIENT_ID}&redirect_uri=${SERVER_URL}/api/login`,
+      `${GITHUB_LOGIN_URL}?client_id=${CLIENT_ID}&redirect_uri=${SERVER_URL}/api/login/github`,
       {
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ const LoginButton: React.FC = () => {
     <>
       <button className="Home-login-button" onClick={login}>
         <a
-          href={`${GITHUB_LOGIN_URL}?client_id=${CLIENT_ID}&redirect_uri=${SERVER_URL}/api/login`}
+          href={`${GITHUB_LOGIN_URL}?client_id=${CLIENT_ID}&redirect_uri=${SERVER_URL}/api/login/github`}
         >
           <img
             className="Home-login-button-image"
