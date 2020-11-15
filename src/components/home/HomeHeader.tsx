@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
-import loginIcon from '../../assets/login-icon.png';
 import './Home.css';
+import LoginButton from '../login/LoginButton';
 
 const HomeHeader = () => {
   return (
@@ -21,13 +21,7 @@ const HomeHeader = () => {
         </a>
       </div>
       <div className="Home-header-end">
-        <a className="Home-login-button" href="https://www.naver.com">
-          <img
-            className="Home-login-button-image"
-            src={loginIcon}
-            alt="loginIcon"
-          />
-        </a>
+        <LoginButton />
       </div>
     </div>
   );
