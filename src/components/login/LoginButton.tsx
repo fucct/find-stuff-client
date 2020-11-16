@@ -6,18 +6,29 @@ import {
   GITHUB_LOGIN_URL,
   SERVER_URL,
 } from '../../constants/constants';
+import { useRecoilState } from 'recoil';
+import { TokenState } from './MemberState';
+import { Link } from 'react-router-dom';
 
 const LoginButton: React.FC = () => {
-  const login = async () => {
+  const [token, setToken] = useRecoilState(TokenState);
+
+  const login = async (e: React.MouseEvent) => {
     const response = await axios.get(
       `${GITHUB_LOGIN_URL}?client_id=${CLIENT_ID}&redirect_uri=${SERVER_URL}/api/login/github`,
       {
         headers: {
           'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
         },
       },
     );
-    console.log(response.data);
+    setToken(response.data);
+  };
+
+  const sample = (e: React.MouseEvent) => {
+    e.preventDefault();
+    console.log(token);
   };
 
   return (
@@ -32,6 +43,15 @@ const LoginButton: React.FC = () => {
             alt="loginIcon"
           />
         </a>
+      </button>
+      <button className="Home-login-button" onClick={sample}>
+        <Link to="login">
+          <img
+            className="Home-login-button-image"
+            src={loginIcon}
+            alt="loginIcon"
+          />
+        </Link>
       </button>
     </>
   );
