@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Dancing script';
+  font-weight: normal;
+  src: url('../../assets/fonts/dancingscript.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Independence_hall';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Independence_hall.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .Home {
   display: flex;
   flex-direction: column;
@@ -7,13 +21,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
-  height: 5%;
+  height: 60px;
+  width: 100vw;
   border-bottom: #d0d0d0;
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Home-header-start {
@@ -33,7 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10vw;
+  width: 15vw;
 }
 
 .Home-logo {
@@ -44,42 +63,125 @@
 }
 
 .Home-logo-image {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .Home-logo-text {
+  font-family: 'Dancing script';
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 600;
   margin-left: 10px;
 }
 
 .Home-header-button {
   width: 10vh;
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
-.Home-login-button-image{
+.Home-login-button-image {
   width: 30px;
   height: 30px;
+}
+
+button {
+  width: 100px;
+  height: 42px;
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.Home-login-button {
+  color: black;
+  background-color: white;
+  border: solid 2px rgb(217, 226, 239);
+}
+
+.Home-register-button {
+  color: white;
+  background: rgb(255, 36, 77);
+  border: 2px solid rgb(255, 36, 77);
+}
+
+.Home-header-button-text {
+  font-size: 16px;
 }
 
 .Home-body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Home-body-block {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
+  background: linear-gradient(
+      to right,
+      rgba(235, 235, 235, 0.0) 10%,
+      rgba(235, 235, 235, 0.100) 15%,
+      rgba(235, 235, 235, 0.250) 50%,
+      rgba(235, 235, 235, 0.100) 85%,
+      rgba(235, 235, 235, 0.0) 100%
+    ),
+    url('../../assets/home-main-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100vw;
+}
+
+.Home-body-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  height: 100%;
+}
+
+.Home-body-list {
+  margin-top: 20px;
+  margin-left: 300px;
+  padding: 10px;
+  font-size: 20px;
+  height: 70vh;
+}
+
+.mountain-groups{
+  display: flex;
+  flex-direction: row;
+}
+
+.mountain-group-card {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.body-list-title {
+  border: 2px solid black;
+  text-align: start;
+}
+
+.Home-body-title {
+  font-family: 'Independence_hall';
+  font-size: 60px;
+}
+
+.Home-body-contents {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.Home-body-buttons {
+  flex-direction: row;
 }
 
 .beige {
@@ -95,8 +197,8 @@
   color: white;
 }
 
-
 .Home-body-image {
-  height: 80%;
-  object-fit: cover;
+  margin-top: 40px;
+  width: 100%;
+  position: absolute;
 }
