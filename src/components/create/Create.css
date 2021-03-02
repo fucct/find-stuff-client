@@ -1,0 +1,18 @@
+.create-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  margin: 20px;
+}
+.create-group-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.create-group-form-title{
+}
+.create-group-form-contents{
+}

@@ -24,11 +24,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
-  height: 60px;
+  height: 65px;
   width: 100vw;
-  border-bottom: #d0d0d0;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -42,6 +39,7 @@
   margin-left: 20px;
   width: 40vw;
 }
+
 .Home-header-center {
   display: flex;
   justify-content: flex-start;
@@ -85,14 +83,12 @@
   height: 30px;
 }
 
-button {
+.box-button {
   width: 100px;
-  height: 42px;
-  font-size: 14px;
-  padding: 5px;
+  height: 48px;
   margin: 5px;
+  padding: 5px;
 }
-
 .Home-login-button {
   color: black;
   background-color: white;
@@ -107,6 +103,7 @@ button {
 
 .Home-header-button-text {
   font-size: 16px;
+  font-weight: normal;
 }
 
 .Home-body {
@@ -134,9 +131,10 @@ button {
       rgba(235, 235, 235, 0.100) 85%,
       rgba(235, 235, 235, 0.0) 100%
     ),
-    url('../../assets/home-main-background.jpeg');
+    url('https://allways.smotor.com/wp-content/uploads/2020/04/0429_%EB%93%B1%EC%82%B0_%EC%8D%B8%EB%84%A4%EC%9D%BC.jpg');
   background-repeat: no-repeat;
   background-size: 100vw;
+  background-position-y: 50%;
 }
 
 .Home-body-text {

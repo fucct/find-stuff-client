@@ -1,17 +1,17 @@
 import React from 'react';
 import './Home.css';
-import { Button } from './HomeHeader';
+import { BoxButton } from '../buttons/BoxButton';
 
 const HomeBody: React.FC = () => {
   return (
     <div className="Home-body">
       <div className="Home-body-block">
         <div className="Home-body-text">
-          <h1 className="Home-body-title">지금 산타러 갑니다</h1>
-          <div className="Home-body-contents">등산. 너란녀석..</div>
+          <h1 className="Home-body-title">지금 산타러 갑시다</h1>
+          <div className="Home-body-contents">등산.. 너란 녀석...ㅋ</div>
           <div className="Home-body-buttons">
-            <Button>모집하기</Button>
-            <Button color="true">참여하기</Button>
+            <BoxButton links="/create" name="모집하기" />
+            <BoxButton links="/join" name="참여하기" color />
           </div>
         </div>
       </div>
