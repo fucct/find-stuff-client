@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import HomeHeader from '../home/HomeHeader';
 import './Create.css';
 import axios from 'axios';
 
@@ -12,7 +11,6 @@ const Create: React.FC = () => {
     title: '',
     contents: '',
   });
-  const { title, contents } = form;
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -24,8 +22,6 @@ const Create: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.log(e);
-    // 여기도 모르니까 any 로 하겠습니다.
     e.preventDefault();
     const response = await axios({
       method: 'POST',
@@ -38,7 +34,7 @@ const Create: React.FC = () => {
         'Content-Type': 'application/json',
       },
     });
-    console.log(response.data);
+    setForm({ title: '', contents: '' });
   };
 
   return (
