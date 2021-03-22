@@ -7,6 +7,7 @@ type MenuItemProps = {
   width?: string;
   height?: string;
   color?: boolean;
+  onClick?: any;
 };
 
 export const BoxButton: React.FC<MenuItemProps> = ({
@@ -15,6 +16,7 @@ export const BoxButton: React.FC<MenuItemProps> = ({
   width,
   height,
   color,
+  onClick,
 }) => {
   const Button = styled.button`
     cursor: pointer;
@@ -34,6 +36,7 @@ export const BoxButton: React.FC<MenuItemProps> = ({
     color: black;
     background-color: white;
     border: solid 2px rgb(217, 226, 239);
+    border-radius: 4px;
     ${color &&
     css`
       color: white;
@@ -43,7 +46,7 @@ export const BoxButton: React.FC<MenuItemProps> = ({
   `;
 
   return (
-    <a className="box-button" href={links}>
+    <a className="box-button" href={links} onClick={onClick}>
       <Button>{name}</Button>
     </a>
   );
